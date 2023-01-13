@@ -14,10 +14,12 @@ import * as Yup from 'yup';
 
 // Default brand names that I used. You can use what you want
 const brandOptions = [
-  { value: 'Salt Maalat', label: 'Salt Maalat' },
-  { value: 'Betsin Maalat', label: 'Betsin Maalat' },
-  { value: 'Sexbomb', label: 'Sexbomb' },
-  { value: 'Black Kibal', label: 'Black Kibal' }
+  { value: 'Cipla', label: 'Cipla' },
+  { value: 'Ranbaxy', label: 'Ranbaxy' },
+  { value: 'Alpha Drugs', label: 'Alpha Drugs' },
+  { value: 'Lifegenix', label: 'Lifegenix' },
+  { value: 'Medlock', label: 'Medlock' },
+  { value: 'Other', label: 'Other' }
 ];
 
 const FormSchema = Yup.object().shape({
@@ -45,8 +47,6 @@ const FormSchema = Yup.object().shape({
   isFeatured: Yup.boolean(),
   isRecommended: Yup.boolean(),
   availableColors: Yup.array()
-    .of(Yup.string().required())
-    .min(1, 'Please add a default color for this product.')
 });
 
 const ProductForm = ({ product, onSubmit, isLoading }) => {
@@ -175,20 +175,16 @@ const ProductForm = ({ product, onSubmit, isLoading }) => {
                     defaultValue={values.keywords.map((key) => ({ value: key, label: key }))}
                     name="sizes"
                     iid="sizes"
-                    type="number"
+                    type="string"
                     isMulti
                     disabled={isLoading}
-                    placeholder="Create/Select Sizes"
-                    label="* Sizes (Millimeter)"
+                    placeholder="enter value"
+                    label="* mg/ml"
                   />
                 </div>
               </div>
               <div className="product-form-field">
-                <FieldArray
-                  name="availableColors"
-                  disabled={isLoading}
-                  component={CustomColorInput}
-                />
+                
               </div>
               <div className="product-form-field">
                 <span className="d-block padding-s">Image Collection</span>

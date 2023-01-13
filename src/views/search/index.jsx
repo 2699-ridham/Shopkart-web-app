@@ -65,7 +65,7 @@ const Search = ({ match }) => {
   return (
     <main className="content">
       <div className="loader">
-        <h4>Searching Product...</h4>
+        <h4>Searching Medicine...</h4>
         <br />
         <LoadingOutlined style={{ fontSize: '3rem' }} />
       </div>

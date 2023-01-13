@@ -56,7 +56,7 @@ const ViewProduct = () => {
     <main className="content">
       {isLoading && (
         <div className="loader">
-          <h4>Loading Product...</h4>
+          <h4>Loading Medicine...</h4>
           <br />
           <LoadingOutlined style={{ fontSize: '3rem' }} />
         </div>
@@ -69,7 +69,7 @@ const ViewProduct = () => {
           <Link to={SHOP}>
             <h3 className="button-link d-inline-flex">
               <ArrowLeftOutlined />
-              &nbsp; Back to shop
+              &nbsp; Back to Medical Data
             </h3>
           </Link>
           <div className="product-modal">
@@ -108,13 +108,13 @@ const ViewProduct = () => {
               <div className="divider" />
               <br />
               <div>
-                <span className="text-subtle">Lens Width and Frame Size</span>
+                <span className="text-subtle">Select ml/mg</span>
                 <br />
                 <br />
                 <Select
-                  placeholder="--Select Size--"
+                  placeholder="--Select ml/mg--"
                   onChange={onSelectedSizeChange}
-                  options={product.sizes.sort((a, b) => (a < b ? -1 : 1)).map((size) => ({ label: `${size} mm`, value: size }))}
+                  options={product.sizes.sort((a, b) => (a < b ? -1 : 1)).map((size) => ({ label: `${size}`, value: size }))}
                   styles={{ menu: (provided) => ({ ...provided, zIndex: 10 }) }}
                 />
               </div>

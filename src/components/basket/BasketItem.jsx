@@ -35,15 +35,15 @@ const BasketItem = ({ product }) => {
               <h5 className="my-0">{product.quantity}</h5>
             </div>
             <div>
-              <span className="spec-title">Size</span>
+              <span className="spec-title">ml/mg</span>
               <h5 className="my-0">
                 {product.selectedSize}
                 {' '}
-                mm
+                
               </h5>
             </div>
             <div>
-              <span className="spec-title">Color</span>
+              <span className="spec-title"></span>
               <div style={{
                 backgroundColor: product.selectedColor || product.availableColors[0],
                 width: '15px',

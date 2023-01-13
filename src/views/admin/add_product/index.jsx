@@ -19,7 +19,7 @@ const AddProduct = () => {
 
   return (
     <div className="product-form-container">
-      <h2>Add New Product</h2>
+      <h2>Add New Medicine</h2>
       <Suspense fallback={(
         <div className="loader" style={{ minHeight: '80vh' }}>
           <h6>Loading ... </h6>

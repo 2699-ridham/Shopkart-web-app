@@ -33,17 +33,16 @@ const Home = () => {
         <div className="banner">
           <div className="banner-desc">
             <h1 className="text-thin">
-              <strong>See</strong>
-              &nbsp;everything with&nbsp;
-              <strong>Clarity</strong>
+              <strong>We fight for you</strong>
+              &nbsp;you stay at home &nbsp;
+              <strong>for us</strong>
             </h1>
             <p>
-              Buying eyewear should leave you happy and good-looking, with money in your pocket.
-              Glasses, sunglasses, and contacts—we’ve got your eyes covered.
+            Your health is our priority. Always Caring. Always Here
             </p>
             <br />
             <Link to={SHOP} className="button">
-              Shop Now &nbsp;
+              Purchase Medicines now &nbsp;
               <ArrowRightOutlined />
             </Link>
           </div>
@@ -51,7 +50,7 @@ const Home = () => {
         </div>
         <div className="display">
           <div className="display-header">
-            <h1>Featured Products</h1>
+            <h1>Featured Medicines</h1>
             <Link to={FEATURED_PRODUCTS}>See All</Link>
           </div>
           {(errorFeatured && !isLoadingFeatured) ? (
@@ -69,7 +68,7 @@ const Home = () => {
         </div>
         <div className="display">
           <div className="display-header">
-            <h1>Recommended Products</h1>
+            <h1>Recommended Medicines</h1>
             <Link to={RECOMMENDED_PRODUCTS}>See All</Link>
           </div>
           {(errorRecommended && !isLoadingRecommended) ? (
