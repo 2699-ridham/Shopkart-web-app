@@ -19,12 +19,7 @@ const ProductsNavbar = (props) => {
       </h3>
       <SearchBar />
             &nbsp;
-      <FiltersToggle>
-        <button className="button-muted button-small" type="button">
-          <FilterOutlined />
-          &nbsp;More Filters
-        </button>
-      </FiltersToggle>
+      
       <button
         className="button button-small"
         onClick={() => history.push(ADD_PRODUCT)}

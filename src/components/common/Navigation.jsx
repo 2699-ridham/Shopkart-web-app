@@ -79,10 +79,7 @@ const Navigation = () => {
       </ul>
       {(pathname === ROUTE.SHOP || pathname === ROUTE.SEARCH) && (
         <FiltersToggle>
-          <button className="button-muted button-small" type="button">
-            Filters &nbsp;
-            <FilterOutlined />
-          </button>
+          
         </FiltersToggle>
       )}
       <SearchBar />
